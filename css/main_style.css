@@ -36,7 +36,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 50px 50vh 20vh 50vh 100px;
+    grid-template-rows: 50px 50px 100vh 30vh 100vh 100px;
     grid-template-areas:
     "my-header my-header"
     "my-nav my-nav"
@@ -257,7 +257,7 @@ textarea {
 @media (min-width:600px) and (max-width:1000px) {
     main {
         grid-template-columns: 20% 80%;
-        grid-template-rows: 100px 50vh 20vh 50vh 150px;
+        grid-template-rows: 100px 100vh 40vh 100vh 150px;
         grid-template-areas:
         "my-header my-nav"
         "my-section my-section"
@@ -270,7 +270,7 @@ textarea {
 @media (min-width: 1001px) {
     main {
         grid-template-columns: 20% 80%;
-        grid-template-rows: 50px 50vh 30vh 50vh 100px;
+        grid-template-rows: 50px 100vh 40vh 100vh 100px;
         grid-template-areas:
         "my-header my-nav"
         "my-section my-section"
