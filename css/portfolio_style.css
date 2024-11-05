@@ -1,0 +1,188 @@
+/* ---------- General ----------- */ 
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2, h3, h4, p, a, li {
+    font-family:'Helvetiva Neue', sans-serif;
+}
+
+h1{
+    font-size: 2.5em;
+}
+h3 {
+    display: block;
+    font-size: 1.4em;
+}
+
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px 30vh 30vh 30vh 30vh 30vh 30vh 100px;
+    grid-template-areas:
+    "my-header my-header"
+    "my-nav my-nav"
+    "trabajo1 trabajo1"
+    "trabajo2 trabajo2"
+    "trabajo3 trabajo3"
+    "trabajo4 trabajo4"
+    "trabajo5 trabajo5"
+    "my-footer my-footer";
+}
+
+header {
+    grid-area: my-header;
+    background-color: #1e1f2c;
+}
+
+/* menu */
+nav{
+    grid-area: my-nav;
+    background-color: #1e1f2c;
+}
+nav ul {
+    float: right;
+    display: flex;
+    list-style-type: none;
+    padding: 4px;
+}
+
+nav li{
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+/* Estilo para el enlace activo */
+nav a.active {
+    color: #9396d6;
+}
+
+nav a:hover {
+    color: #9396d6;
+}
+
+nav a.active:hover {
+    color: #b2b5ee;
+}
+
+/*Secciones*/
+
+section {
+    display: grid;
+}
+
+.trabajo1 {
+    grid-area: trabajo1;
+}
+
+.trabajo2 {
+    grid-area: trabajo2;
+}
+
+.trabajo3 {
+    grid-area: trabajo3;
+}
+
+.trabajo4 {
+    grid-area: trabajo4;
+}
+.trabajo5 {
+    grid-area: trabajo5;
+}
+
+.img_full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_full img:hover {
+    opacity: 80%;
+}
+
+/* Pie de página */
+footer {
+    grid-area: my-footer;
+    background-color: #1e1f2c;
+    color: aliceblue;
+}
+
+header img {
+    object-fit: cover;
+    padding: 10px 20px;
+    max-height: 100%;
+}
+
+footer div{
+    display: inline;
+    margin: auto 10px;
+}
+
+footer p {
+    display: inline-block;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9396d6;
+}
+
+
+.social {
+    float: right;
+    padding: 10px 15px;
+    height: 30px;
+}
+
+
+@media (min-width:600px) and (max-width:1000px) {
+    main {
+        grid-template-columns: 20% 40% 40%;
+        grid-template-rows: 100px 40vh 40vh 40vh 150px;
+        grid-template-areas:
+        "my-header my-nav my-nav"
+        "trabajo1 trabajo1 trabajo1"
+        "trabajo2 trabajo2 trabajo3"
+        "trabajo4 trabajo5 trabajo5"
+        "my-footer my-footer my-footer"; 
+    }
+}
+
+@media (min-width: 1001px) {
+    main {
+        grid-template-columns: 20% 10% 70%;
+        grid-template-rows: 50px 40vh 40vh 40vh 100px;
+        grid-template-areas:
+        "my-header my-nav my-nav"
+        "trabajo1 trabajo1 trabajo2"
+        "trabajo3 trabajo3 trabajo3"
+        "trabajo4 trabajo5 trabajo5"
+        "my-footer my-footer my-footer";
+    }
+
+    h1{
+        font-size: 4em;
+    }
+    h3 {
+        display: block;
+        font-size: 3em;
+    }
+}
+
+
+

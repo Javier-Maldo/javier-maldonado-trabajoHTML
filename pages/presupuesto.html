@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="../css/main_style.css">
+</head>
+<body>
+    <main>
+        <header>
+                 <img src="../images/logo.png" alt="Logo" title="Logo">
+        </header>
+        <nav>
+                <ul>
+                    <li><a href="../index.html" >Inicio</a></li>
+                    <li><a href="#" class="active">Presupuesto</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+        </nav>
+        <section>
+            <h3 class="form">Mandanos tu propuesta</h3>
+            <div class="form">
+                <form name="formulario" method="post">
+                    <p>Nombre</p><input type="text" name="nombre" id="nombre" value="">
+                    <p>E-mail</p><input type="email" name="email" id="email">
+                    <p>Telefono</p><input type="tel" name="telefono" id="telefono">
+                    <br><textarea id="informacion" cols="30" rows="6" name="informacion"></textarea><br>
+                    Acepto los términos<input type="checkbox" name="politica" id="politica" value="Acepto"><br>
+                    <input type="submit" name="boton" value="enviar" class="send_form">
+                </form>
+            </div>
+            <script>
+                document.getElementById("formulario").addEventListener("submit", function(event) {
+                    const nombre = document.getElementById("nombre").value;
+                    const email = document.getElementById("email").value;
+                    const telefono = document.getElementById("telefono").value;
+                    const informacion = document.getElementById("informacion").value;
+                    const politica = document.getElementById("politica").checked;
+            
+                    if (!nombre || !email || !telefono || !informacion || !politica) {
+                        alert("Por favor, complete todos los campos y acepte la Política de privacidad.");
+                        event.preventDefault();
+                    }
+                });
+            </script>
+        </section>
+        <aside></aside>
+        <div class="services">
+            <div></div>
+        </div>
+        <footer>
+            <div>
+                <p>Calle Vicente Aleixander 18640 (Granada) - <a href="#">Política de privacidad</a></p>
+            </div>   
+            <div class="social">
+                <a href=""><img src="../images/icono_instagram.png" alt="Icono Instagram"></a>
+                <a href=""><img src="../images/icono_facebook.png" alt="Icono Facebook"></a>
+             </div>
+        </footer>
+        </main>   
+
+
+
+</body>
+</html>
