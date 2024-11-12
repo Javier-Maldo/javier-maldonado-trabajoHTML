@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="../css/main_style.css">
 </head>
 <body>
-    <main>
-        <header>
-                 <img src="../images/logo.png" alt="Logo" title="Logo">
-        </header>
+    <header>
+        <img src="../images/logo.png" alt="Logo" title="Logo">
         <nav>
                 <ul>
                     <li><a href="../index.html" >Inicio</a></li>
@@ -19,7 +17,7 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
         </nav>
-        <section>
+    </header>
             <h3 class="form">Mandanos tu propuesta</h3>
             <div class="form">
                 <form name="formulario" method="post">
@@ -31,22 +29,7 @@
                     <input type="submit" name="boton" value="enviar" class="send_form">
                 </form>
             </div>
-            <script>
-                document.getElementById("formulario").addEventListener("submit", function(event) {
-                    const nombre = document.getElementById("nombre").value;
-                    const email = document.getElementById("email").value;
-                    const telefono = document.getElementById("telefono").value;
-                    const informacion = document.getElementById("informacion").value;
-                    const politica = document.getElementById("politica").checked;
-            
-                    if (!nombre || !email || !telefono || !informacion || !politica) {
-                        alert("Por favor, complete todos los campos y acepte la Política de privacidad.");
-                        event.preventDefault();
-                    }
-                });
-            </script>
-        </section>
-        <footer>
+    <footer>
             <div>
                 <p>Calle Vicente Aleixander 18640 (Granada) - <a href="#">Política de privacidad</a></p>
             </div>   
@@ -54,10 +37,6 @@
                 <a href="https://www.instagram.com/maldo_reivaj/"><img src="../images/icono_instagram.png" alt="Icono Instagram"></a>
                 <a href="https://www.facebook.com/people/Javier-Maldonado/100065280528854/"><img src="../images/icono_facebook.png" alt="Icono Facebook"></a>
              </div>
-        </footer>
-        </main>   
-
-
-
+    </footer>
 </body>
 </html>

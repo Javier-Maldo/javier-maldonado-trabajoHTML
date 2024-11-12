@@ -29,21 +29,14 @@ h4 {
     padding: 4px;
 }
 
-
-main {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50px 50px 100vh 30vh 100vh 100px;
+header {      
+    display: grid;  
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px 50px;
     grid-template-areas:
     "my-header my-header"
-    "my-nav my-nav"
-    "my-section my-section"
-    "my-aside my-aside"
-    "my-services my-services"
-    "my-footer my-footer";
+    "my-nav my-nav";
+
 }
 
 header {
@@ -56,8 +49,6 @@ header img {
     padding: 10px 20px;
     max-height: 100%;
 }
-
-
 /* menu */
 nav{
     grid-area: my-nav;
@@ -96,6 +87,18 @@ nav a.active:hover {
 }
 
 /*Secciones*/
+main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 30vh 100vh;
+    grid-template-areas:
+    "my-section my-section"
+    "my-aside my-aside"
+    "my-services my-services";
+}
 
 section {
     grid-area: my-section;
@@ -200,12 +203,18 @@ aside{
 
 /* Pie de Página */
 footer {
-    grid-area: my-footer;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px 80px;
+    grid-template-areas:
+    "social social"
+    "terms terms";
     background-color: #1e1f2c;
     color: aliceblue;
 }
 
 footer div{
+    grid-area: terms;
     display: inline;
     margin: auto 10px;
 }
@@ -222,9 +231,8 @@ footer a {
 
 
 .social {
-    float: right;
+    grid-area: social;
     padding: 10px 15px;
-    height: 30px;
 }
 
 /* Formulario de contacto */
@@ -255,28 +263,61 @@ textarea {
 
 
 @media (min-width:600px) and (max-width:1000px) {
+    header {        
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100px;
+        grid-template-areas:
+        "my-header my-nav";
+    }
+    
+
+    footer {
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px;
+        grid-template-areas:
+        "my-footer my-footer";
+    }
     main {
         grid-template-columns: 20% 80%;
-        grid-template-rows: 100px 100vh 40vh 100vh 150px;
+        grid-template-rows: 100vh 40vh 100vh;
         grid-template-areas:
-        "my-header my-nav"
         "my-section my-section"
         "my-aside my-aside"
-        "my-services my-services"
-        "my-footer my-footer"; 
+        "my-services my-services"; 
+    }
+
+    footer img {
+        float: right;
+        margin: 5px;
     }
 }
 
 @media (min-width: 1001px) {
-    main {
+    header {        
+        display: grid;
         grid-template-columns: 20% 80%;
-        grid-template-rows: 50px 100vh 40vh 100vh 100px;
+        grid-template-rows: 50px;
         grid-template-areas:
-        "my-header my-nav"
+        "my-header my-nav";
+
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100vh 40vh 100vh;
+        grid-template-areas:
         "my-section my-section"
         "my-aside my-aside"
-        "my-services my-services"
-        "my-footer my-footer";
+        "my-services my-services";
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px;
+        grid-template-areas:
+        "terms social";
     }
 
     h1{
@@ -324,6 +365,11 @@ textarea {
         width: 60%;
         text-align: justify;
         margin: 20px auto;
+    }
+
+    footer img {
+        float: right;
+        margin: 5px;
     }
 }
 

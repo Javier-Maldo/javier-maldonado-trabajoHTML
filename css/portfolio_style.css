@@ -18,6 +18,17 @@ h3 {
     font-size: 1.4em;
 }
 
+header {    
+    width: 100%;    
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+    "my-header my-header"
+    "my-nav my-nav";
+
+}
+
 
 main {
     width: 100%;
@@ -25,21 +36,24 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 50px 30vh 30vh 30vh 30vh 30vh 30vh 100px;
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh;
     grid-template-areas:
-    "my-header my-header"
-    "my-nav my-nav"
     "trabajo1 trabajo1"
     "trabajo2 trabajo2"
     "trabajo3 trabajo3"
     "trabajo4 trabajo4"
-    "trabajo5 trabajo5"
-    "my-footer my-footer";
+    "trabajo5 trabajo5";
 }
 
 header {
     grid-area: my-header;
     background-color: #1e1f2c;
+}
+
+header img {
+    object-fit: cover;
+    padding: 10px 20px;
+    max-height: 100%;
 }
 
 /* menu */
@@ -116,18 +130,17 @@ section {
 
 /* Pie de página */
 footer {
-    grid-area: my-footer;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100px;
+    grid-template-areas:
+    "terms social";
     background-color: #1e1f2c;
     color: aliceblue;
 }
 
-header img {
-    object-fit: cover;
-    padding: 10px 20px;
-    max-height: 100%;
-}
 
 footer div{
+    grid-area: terms;
     display: inline;
     margin: auto 10px;
 }
@@ -144,35 +157,67 @@ footer a {
 
 
 .social {
-    float: right;
+    grid-area: social;
     padding: 10px 15px;
-    height: 30px;
+}
+
+footer img {
+    float: right;
+    margin: 5px;
 }
 
 
 @media (min-width:600px) and (max-width:1000px) {
+    header {        
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100px;
+        grid-template-areas:
+        "my-header my-nav";
+
+    }
     main {
         grid-template-columns: 20% 40% 40%;
-        grid-template-rows: 100px 40vh 40vh 40vh 150px;
+        grid-template-rows: 40vh 40vh 40vh;
         grid-template-areas:
-        "my-header my-nav my-nav"
         "trabajo1 trabajo1 trabajo1"
         "trabajo2 trabajo2 trabajo3"
-        "trabajo4 trabajo5 trabajo5"
-        "my-footer my-footer my-footer"; 
+        "trabajo4 trabajo5 trabajo5"; 
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 150px;
+        grid-template-areas:
+        "terms social";
     }
 }
 
 @media (min-width: 1001px) {
+    header {        
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50px;
+        grid-template-areas:
+        "my-header my-nav";
+
+    }
+    
     main {
         grid-template-columns: 20% 10% 70%;
-        grid-template-rows: 50px 40vh 40vh 40vh 100px;
+        grid-template-rows: 40vh 40vh 40vh;
         grid-template-areas:
-        "my-header my-nav my-nav"
         "trabajo1 trabajo1 trabajo2"
         "trabajo3 trabajo3 trabajo3"
-        "trabajo4 trabajo5 trabajo5"
-        "my-footer my-footer my-footer";
+        "trabajo4 trabajo5 trabajo5";
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px;
+        grid-template-areas:
+        "terms social";
     }
 
     h1{
