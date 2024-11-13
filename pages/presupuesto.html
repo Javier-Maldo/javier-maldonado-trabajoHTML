@@ -21,11 +21,11 @@
             <h3 class="form">Mandanos tu propuesta</h3>
             <div class="form">
                 <form name="formulario" method="post">
-                    <p>Nombre</p><input type="text" name="nombre" id="nombre" value="">
-                    <p>E-mail</p><input type="email" name="email" id="email">
-                    <p>Telefono</p><input type="tel" name="telefono" id="telefono">
-                    <br><textarea id="informacion" cols="30" rows="6" name="informacion"></textarea><br>
-                    Acepto los términos<input type="checkbox" name="politica" id="politica" value="Acepto"><br>
+                    <p>Nombre</p><input type="text" name="nombre" id="nombre" pattern="[a-z]{1,15}" >
+                    <p>E-mail</p><input type="email" name="email" id="email" pattern="[a-z]{1,15}" title="Emails should havw @">
+                    <p>Telefono</p><input type="tel" name="telefono" pattern="[a-z]{1,15}" id="telefono">
+                    <br><textarea id="informacion" cols="30" rows="6" name="informacion" pattern="[a-z]{1,15}"></textarea><br>
+                    Acepto los términos<input type="checkbox" name="politica" id="politica" value="Acepto" pattern="[a-z]{1,15}"><br>
                     <input type="submit" name="boton" value="enviar" class="send_form">
                 </form>
             </div>
@@ -34,8 +34,8 @@
                 <p>Calle Vicente Aleixander 18640 (Granada) - <a href="#">Política de privacidad</a></p>
             </div>   
             <div class="social">
-                <a href="https://www.instagram.com/maldo_reivaj/"><img src="../images/icono_instagram.png" alt="Icono Instagram"></a>
-                <a href="https://www.facebook.com/people/Javier-Maldonado/100065280528854/"><img src="../images/icono_facebook.png" alt="Icono Facebook"></a>
+                <a href="https://www.instagram.com/maldo_reivaj/"><img alt="Icono Instagram" src="../images/icono_instagram.png" width="30" height="30"></a>
+                <a href="https://www.facebook.com/people/Javier-Maldonado/100065280528854/"><img alt="Icono Facebook" src="../images/icono_facebook.png" width="30" height="30"></a>
              </div>
     </footer>
 </body>

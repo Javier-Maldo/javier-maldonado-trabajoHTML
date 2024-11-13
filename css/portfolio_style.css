@@ -36,7 +36,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh;
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh;
     grid-template-areas:
     "trabajo1 trabajo1"
     "trabajo2 trabajo2"
@@ -46,14 +46,17 @@ main {
 }
 
 header {
-    grid-area: my-header;
     background-color: #1e1f2c;
 }
 
 header img {
+    grid-area: my-header;
     object-fit: cover;
-    padding: 10px 20px;
+    padding: 10px;
+    width: 17%;
+    display: grid;
     max-height: 100%;
+    margin: auto;
 }
 
 /* menu */
@@ -170,8 +173,8 @@ footer img {
 @media (min-width:600px) and (max-width:1000px) {
     header {        
         display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 100px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50px;
         grid-template-areas:
         "my-header my-nav";
 
@@ -191,6 +194,12 @@ footer img {
         grid-template-areas:
         "terms social";
     }
+
+    header img {
+        width: 40%;
+        margin: 0;
+        padding: 10px 15px;
+    }
 }
 
 @media (min-width: 1001px) {
@@ -201,6 +210,12 @@ footer img {
         grid-template-areas:
         "my-header my-nav";
 
+    }
+
+    header img {
+        width: 30%;
+        margin: 0;
+        padding: 10px 25px;
     }
     
     main {

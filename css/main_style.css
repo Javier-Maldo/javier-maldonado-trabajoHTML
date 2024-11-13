@@ -40,14 +40,17 @@ header {
 }
 
 header {
-    grid-area: my-header;
     background-color: #1e1f2c;
 }
 
 header img {
+    grid-area: my-header;
     object-fit: cover;
-    padding: 10px 20px;
+    padding: 10px;
+    width: 17%;
+    display: grid;
     max-height: 100%;
+    margin: auto;
 }
 /* menu */
 nav{
@@ -265,17 +268,17 @@ textarea {
 @media (min-width:600px) and (max-width:1000px) {
     header {        
         grid-template-columns: 20% 80%;
-        grid-template-rows: 100px;
+        grid-template-rows: 50px;
         grid-template-areas:
         "my-header my-nav";
     }
     
 
     footer {
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 150px;
         grid-template-areas:
-        "my-footer my-footer";
+        "terms social";
     }
     main {
         grid-template-columns: 20% 80%;
@@ -284,6 +287,12 @@ textarea {
         "my-section my-section"
         "my-aside my-aside"
         "my-services my-services"; 
+    }
+
+    header img {
+        width: 40%;
+        margin: 0;
+        padding: 10px 15px;
     }
 
     footer img {
@@ -300,6 +309,11 @@ textarea {
         grid-template-areas:
         "my-header my-nav";
 
+    }
+    header img {
+        width: 30%;
+        margin: 0;
+        padding: 10px 25px;
     }
     
     main {
